@@ -10,5 +10,10 @@ namespace Soenneker.Polymarket.OpenApiClientUtil.Abstract;
 /// </summary>
 public interface IPolymarketOpenApiClientUtil: IDisposable, IAsyncDisposable
 {
+    /// <summary>
+    /// Returns the configured polymarket OpenAPI Client used by the Polymarket OpenAPI Client.
+    /// </summary>
+    /// <param name="cancellationToken">Token used to cancel the operation.</param>
+    /// <returns>A task whose result is the requested polymarket OpenAPI Client.</returns>
     ValueTask<PolymarketOpenApiClient> Get(CancellationToken cancellationToken = default);
 }

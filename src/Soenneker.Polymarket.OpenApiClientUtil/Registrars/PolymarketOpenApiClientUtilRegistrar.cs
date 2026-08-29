@@ -13,6 +13,8 @@ public static class PolymarketOpenApiClientUtilRegistrar
     /// <summary>
     /// Adds <see cref="PolymarketOpenApiClientUtil"/> as a singleton service. <para/>
     /// </summary>
+    /// <param name="services">Service collection that receives the registration.</param>
+    /// <returns>The same service collection, so additional registrations can be chained.</returns>
     public static IServiceCollection AddPolymarketOpenApiClientUtilAsSingleton(this IServiceCollection services)
     {
         services.AddPolymarketOpenApiHttpClientAsSingleton()
@@ -24,6 +26,8 @@ public static class PolymarketOpenApiClientUtilRegistrar
     /// <summary>
     /// Adds <see cref="PolymarketOpenApiClientUtil"/> as a scoped service. <para/>
     /// </summary>
+    /// <param name="services">Service collection that receives the registration.</param>
+    /// <returns>The same service collection, so additional registrations can be chained.</returns>
     public static IServiceCollection AddPolymarketOpenApiClientUtilAsScoped(this IServiceCollection services)
     {
         services.AddPolymarketOpenApiHttpClientAsSingleton()
