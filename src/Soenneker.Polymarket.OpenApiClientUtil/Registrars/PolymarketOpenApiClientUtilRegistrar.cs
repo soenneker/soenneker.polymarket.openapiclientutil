@@ -6,7 +6,7 @@ using Soenneker.Polymarket.OpenApiClientUtil.Abstract;
 namespace Soenneker.Polymarket.OpenApiClientUtil.Registrars;
 
 /// <summary>
-/// Registers the OpenAPI client utility for dependency injection.
+/// Registers the routed Polymarket API client provider.
 /// </summary>
 public static class PolymarketOpenApiClientUtilRegistrar
 {

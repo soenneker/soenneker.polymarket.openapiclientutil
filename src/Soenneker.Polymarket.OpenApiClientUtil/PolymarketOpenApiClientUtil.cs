@@ -11,7 +11,6 @@ using Soenneker.Utils.AsyncSingleton;
 
 namespace Soenneker.Polymarket.OpenApiClientUtil;
 
-/// <inheritdoc cref="IPolymarketOpenApiClientUtil"/>
 public sealed class PolymarketOpenApiClientUtil : IPolymarketOpenApiClientUtil
 {
     private readonly AsyncSingleton<PolymarketOpenApiClient> _client;
@@ -22,7 +21,10 @@ public sealed class PolymarketOpenApiClientUtil : IPolymarketOpenApiClientUtil
         {
             HttpClient httpClient = await httpClientUtil.Get(token).NoSync();
 
-            var requestAdapter = new HttpClientRequestAdapter(new AnonymousAuthenticationProvider(), httpClient: httpClient);
+            var requestAdapter = new HttpClientRequestAdapter(new AnonymousAuthenticationProvider(), httpClient: httpClient)
+            {
+                BaseUrl = httpClient.BaseAddress!.ToString().TrimEnd('/')
+            };
 
             return new PolymarketOpenApiClient(requestAdapter);
         });

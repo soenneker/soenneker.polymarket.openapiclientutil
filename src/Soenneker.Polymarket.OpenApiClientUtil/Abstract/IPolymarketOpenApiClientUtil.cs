@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 namespace Soenneker.Polymarket.OpenApiClientUtil.Abstract;
 
 /// <summary>
-/// Exposes a cached OpenAPI client instance.
+/// Provides a cached client that routes requests across Polymarket's APIs.
 /// </summary>
 public interface IPolymarketOpenApiClientUtil: IDisposable, IAsyncDisposable
 {
     /// <summary>
-    /// Returns the configured polymarket OpenAPI Client used by the Polymarket OpenAPI Client.
+    /// Gets the generated Polymarket client.
     /// </summary>
     /// <param name="cancellationToken">Token used to cancel the operation.</param>
-    /// <returns>A task whose result is the requested polymarket OpenAPI Client.</returns>
+    /// <returns>The cached Polymarket client.</returns>
     ValueTask<PolymarketOpenApiClient> Get(CancellationToken cancellationToken = default);
 }
