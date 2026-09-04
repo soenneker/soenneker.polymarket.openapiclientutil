@@ -11,6 +11,7 @@ using Soenneker.Utils.AsyncSingleton;
 
 namespace Soenneker.Polymarket.OpenApiClientUtil;
 
+/// <inheritdoc cref="IPolymarketOpenApiClientUtil" />
 public sealed class PolymarketOpenApiClientUtil : IPolymarketOpenApiClientUtil
 {
     private readonly AsyncSingleton<PolymarketOpenApiClient> _client;
