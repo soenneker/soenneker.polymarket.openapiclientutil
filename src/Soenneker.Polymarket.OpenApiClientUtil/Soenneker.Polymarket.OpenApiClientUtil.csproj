@@ -44,6 +44,6 @@
 
     <ItemGroup>
         <PackageReference Include="Soenneker.Polymarket.HttpClients" Version="4.0.31" />
-        <PackageReference Include="Soenneker.Polymarket.OpenApiClient" Version="4.0.15" />
+        <PackageReference Include="Soenneker.Polymarket.OpenApiClient" Version="4.0.16" />
     </ItemGroup>
 </Project>
